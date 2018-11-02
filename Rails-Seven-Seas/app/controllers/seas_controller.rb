@@ -1,5 +1,9 @@
 class SeasController < ApplicationController
 
+  def welcome
+
+  end
+
   def index
     @seas = Sea.all
   end
@@ -28,8 +32,8 @@ class SeasController < ApplicationController
   end
 
   def destroy
-    sea = Sea.find(params[:id])
-    sea.destroy
+    Sea.find(params[:id]).destroy
+    redirect_to seas_path
   end
 
 
