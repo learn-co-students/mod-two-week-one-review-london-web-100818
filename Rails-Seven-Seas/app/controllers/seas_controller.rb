@@ -1,27 +1,29 @@
 class SeasController < ApplicationController
 
   def new
-
+    
   end
 
   def edit
-
+    @sea = Sea.find(params[:id])
   end
 
   def show
-
+    @sea = Sea.find(params[:id])
   end
 
   def update
-
+    sea = Sea.find(params[:id])
+    sea.update(params[:sea])
   end
 
   def destroy
-
+    sea = Sea.find(params[:id])
+    sea.destroy
   end
 
   def create
-
+    Sea.create(params[:sea])
   end
 
   private
